@@ -21,7 +21,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",   {
   useCreateIndex: true,
   useFindAndModify: false
 });
-
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
