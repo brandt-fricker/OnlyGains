@@ -1,6 +1,8 @@
-const { Workout }= require("../models");
+const { Workout } = require("../models");
+const db = require("../models")
 
 module.exports = function (app) {
+  
   app.get("/api/workouts", (req, res) => {
     Workout.aggregate([
       {
@@ -11,8 +13,8 @@ module.exports = function (app) {
         },
       },
     ])
-      .then((dbWorkout) => {
-        res.json(dbWorkout);
+      .then((data) => {
+        res.json(data);
       })
       .catch((err) => {
         res.json(err);
