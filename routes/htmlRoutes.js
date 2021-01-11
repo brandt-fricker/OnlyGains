@@ -1,7 +1,4 @@
-
-
 var path = require("path");
-const workout = require("../models/workout.js");
 
 module.exports = function (app) {
   app.get("/exercise", function (req, res) {
