@@ -1,16 +1,16 @@
-const path = require("path");
-const workout = require("../models/workout.js");
+
+
+var path = require("path");
+// const workout = require("../models/workout.js");
 
 module.exports = function (app) {
-  app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+  app.get("/exercise", function (req, res) {
+    res.sendFile(path.resolve("./public/exercise.html"));
   });
-
-  app.get("/exercise", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/exercise.html"));
+  app.get("/stats", function (req, res) {
+    res.sendFile(path.resolve("./public/stats.html"));
   });
-
-  app.get("/stats", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/stats.html"));
+  app.get("/", function (req, res) {
+    res.sendFile(path.resolve("./public/index.html"));
   });
 };
