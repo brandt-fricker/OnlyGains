@@ -8,6 +8,7 @@ module.exports = function (app) {
     res.sendFile(path.resolve("./public/stats.html"));
   });
   app.get("/", function (req, res) {
-    res.sendFile(path.resolve("./public/index.html"));
+    res.sendFile(path.resolve("../public/index.html"));
   });
 };
+

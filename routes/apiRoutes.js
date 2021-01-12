@@ -1,5 +1,5 @@
-const Workout = require("../models/workout");
-
+const Workout = require("../models").Workout;
+const router = require("express").Router()
 module.exports = function (app) {
   app.get("/api/workouts", (req, res) => {
     Workout.aggregate([
