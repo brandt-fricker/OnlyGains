@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.get("/stats", function (req, res) {
     res.sendFile(path.resolve("./public/stats.html"));
   });
-  app.get("/", function (req, res) {
+  app.get("*", function (req, res) {
     res.sendFile(path.resolve("../public/index.html"));
   });
 };
